@@ -31,6 +31,11 @@ app.post('/api/users', (req, res)=>{
 });
 
 
+// 2. Get all users
+app.get('/api/users', (req, res)=> {
+  res.json(users);
+})
+
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port)
 })
